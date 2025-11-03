@@ -73,7 +73,7 @@ UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 
 --// 🔗 DAFTAR LIST EXEC (isi sesukamu)
 local SystemList = {
-	["⛰️ YAHAYUK"] = "https://raw.githubusercontent.com/unknwon1122/0081083729/refs/heads/main/obfuscated_script-1762177820862.lua.txt",
+	["⛰️ YAHAYUK"] = "https://raw.githubusercontent.com/unknwon1122/0081083729/refs/heads/main/YAHYUK.txt",
 	["⛰️ CYLAA (BETA)"] = "https://raw.githubusercontent.com/unknwon1122/0081083729/refs/heads/main/CYLAA.txt",
 	["📍SV POSISI"] = "https://pastefy.app/JLgzGLk1/raw",	
 }
