@@ -74,10 +74,9 @@ UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 --// 🔗 DAFTAR LIST EXEC (isi sesukamu)
 local SystemList = {
 	["⛰️ YAHAYUK"] = "https://raw.githubusercontent.com/unknwon1122/0081083729/refs/heads/main/YAHAYUK1.txt",
-	["💨 BOOST FPS"] = "loadstring(game:HttpGet("https://pastefy.app/8XD6d1eM/raw"))()",
+	["💨 BOOST FPS"] = [[loadstring(game:HttpGet("https://pastefy.app/8XD6d1eM/raw"))()]],
 	["📍SV POSISI"] = "https://pastefy.app/JLgzGLk1/raw",
-    ["💾KORDINAT MAKER"] =
-"loadstring(game:HttpGetAsync("https://pastefy.app/476wUHku/raw"))()"
+	["💾KORDINAT MAKER"] = [[loadstring(game:HttpGetAsync("https://pastefy.app/476wUHku/raw"))()]]
 }
 
 for name, url in pairs(SystemList) do
