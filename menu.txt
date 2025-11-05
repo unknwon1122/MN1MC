@@ -220,120 +220,13 @@ MainFrame.InputEnded:Connect(function(input)
 	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
 		dragging = false
 	end
-end)// 💠 J4ROT MENU (FINAL FIX + CLOSE BUTTON)
-local Players = game:GetService("Players")
-local TweenService = game:GetService("TweenService")
-local UIS = game:GetService("UserInputService")
-local Player = Players.LocalPlayer
-local PlayerGui = Player:WaitForChild("PlayerGui")
-
---// GUI Utama
-local ScreenGui = Instance.new("ScreenGui")
-ScreenGui.Name = "J4ROT_MENU"
-ScreenGui.ResetOnSpawn = false
-ScreenGui.Parent = PlayerGui
-
-local MainFrame = Instance.new("Frame")
-MainFrame.Size = UDim2.new(0, 350, 0, 400)
-MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
-MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-MainFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-MainFrame.BackgroundTransparency = 0.35
-MainFrame.Active = true
-MainFrame.Draggable = false
-MainFrame.Parent = ScreenGui
-Instance.new("UICorner", MainFrame).CornerRadius = UDim.new(0, 12)
-
---// Judul
-local Title = Instance.new("TextLabel")
-Title.Size = UDim2.new(1, 0, 0, 35)
-Title.BackgroundTransparency = 1
-Title.Text = "💠 J4ROT Panel"
-Title.Font = Enum.Font.GothamBlack
-Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title.TextSize = 18
-Title.Parent = MainFrame
-
---// Tombol Minimize
-local MinBtn = Instance.new("TextButton")
-MinBtn.Size = UDim2.new(0, 30, 0, 30)
-MinBtn.Position = UDim2.new(1, -70, 0, 5)
-MinBtn.BackgroundTransparency = 1
-MinBtn.Text = "-"
-MinBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-MinBtn.Font = Enum.Font.GothamBold
-MinBtn.TextSize = 20
-MinBtn.Parent = MainFrame
-
---// Tombol Close (❌)
-local CloseBtn = Instance.new("TextButton")
-CloseBtn.Size = UDim2.new(0, 30, 0, 30)
-CloseBtn.Position = UDim2.new(1, -35, 0, 5)
-CloseBtn.BackgroundTransparency = 1
-CloseBtn.Text = "X"
-CloseBtn.TextColor3 = Color3.fromRGB(255, 60, 60)
-CloseBtn.Font = Enum.Font.GothamBold
-CloseBtn.TextSize = 20
-CloseBtn.Parent = MainFrame
-
---// ScrollFrame (bisa di scroll di HP & PC)
-local ScrollFrame = Instance.new("ScrollingFrame")
-ScrollFrame.Size = UDim2.new(1, -10, 1, -45)
-ScrollFrame.Position = UDim2.new(0, 5, 0, 40)
-ScrollFrame.BackgroundTransparency = 1
-ScrollFrame.ScrollBarThickness = 6
-ScrollFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
-ScrollFrame.ScrollingEnabled = true
-ScrollFrame.Active = true
-ScrollFrame.Selectable = true
-ScrollFrame.ClipsDescendants = true
-ScrollFrame.Parent = MainFrame
-
-local UIListLayout = Instance.new("UIListLayout", ScrollFrame)
-UIListLayout.Padding = UDim.new(0, 6)
-UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-
---// 🔗 DAFTAR LIST EXEC (isi sesukamu)
-local SystemList = {
-	["⛰️ YAHAYUK"] = "https://raw.githubusercontent.com/unknwon1122/0081083729/refs/heads/main/YAHAYUK1.txt",
-	["💨 BOOST FPS"] = [[loadstring(game:HttpGet("https://pastefy.app/8XD6d1eM/raw"))()]],
-	["📍SV POSISI"] = "https://pastefy.app/JLgzGLk1/raw",
-	["💾KORDINAT MAKER"] = [[loadstring(game:HttpGetAsync("https://pastefy.app/476wUHku/raw"))()]]
-}
-
-for name, url in pairs(SystemList) do
-	local Btn = Instance.new("TextButton")
-	Btn.Size = UDim2.new(1, -10, 0, 35)
-	Btn.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-	Btn.BackgroundTransparency = 0.4
-	Btn.Text = name
-	Btn.TextColor3 = Color3.fromRGB(255, 255, 255)
-	Btn.Font = Enum.Font.Gotham
-	Btn.TextSize = 15
-	Btn.Parent = ScrollFrame
-	Instance.new("UICorner", Btn).CornerRadius = UDim.new(0, 8)
-
-	Btn.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet(url))()
-	end)
-end
-
-UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
-	ScrollFrame.CanvasSize = UDim2.new(0, 0, 0, UIListLayout.AbsoluteContentSize.Y)
 end)
 
---// Tombol Restore (kiri tengah)
-local RestoreBtn = Instance.new("ImageButton")
-RestoreBtn.Size = UDim2.new(0, 50, 0, 50)
-RestoreBtn.Position = UDim2.new(0, 10, 0.5, -25)
-RestoreBtn.AnchorPoint = Vector2.new(0, 0.5)
-RestoreBtn.BackgroundTransparency = 0.4
-RestoreBtn.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-RestoreBtn.Image = "rbxassetid://76235443910424"
-RestoreBtn.Visible = false
-RestoreBtn.Parent = ScreenGui
-Instance.new("UICorner", RestoreBtn).CornerRadius = UDim.new(1, 0)
-
+MainFrame.InputEnded:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+		dragging = false
+	end
+end)
 local MText = Instance.new("TextLabel")
 MText.Size = UDim2.new(1, 0, 1, 0)
 MText.BackgroundTransparency = 1
